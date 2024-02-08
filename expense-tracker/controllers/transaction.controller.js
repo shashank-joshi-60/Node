@@ -77,7 +77,7 @@ exports.deleteTransactions = async (req, res, next) => {
         //     })
         // }
         const transaction = await Transaction.findByIdAndRemove(req.params.id)
-        console.log();
+        console.log('transaction', transaction)
         if (!transaction) {
             return res.status(400).json({
                 success: false,
